@@ -3,15 +3,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-	sh 'echo "1:buildando o código..."'
-        sh 'docker build -f Dockerfile.build -t jogo-build .'
+	bat 'echo "1:buildando o código..."'
+        bat 'docker build -f Dockerfile.build -t jogo-build .'
       }
     }
     stage('Test') {
       steps {
-	sh 'echo "2:testando o código..."'
-        sh 'docker build -f Dockerfile.test -t jogo-teste .'
-        sh 'docker run jogo-teste'
+	bat 'echo "2:testando o código..."'
+        bat 'docker build -f Dockerfile.test -t jogo-teste .'
+        bat 'docker run jogo-teste'
       }
     }
   }
