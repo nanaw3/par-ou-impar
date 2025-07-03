@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-	sh echo "2:testando o código..."
+	sh 'echo "2:testando o código..."'
         sh 'docker build -f Dockerfile.test -t jogo-teste .'
         sh 'docker run jogo-teste'
       }
