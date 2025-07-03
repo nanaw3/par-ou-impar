@@ -1,6 +1,6 @@
 FROM openjdk:17
 WORKDIR /app
 COPY ./src /app
-COPY ./test /app
+COPY ./teste /app
 RUN javac Jogo.java Testejogo.java
 CMD ["java", "TesteJogo"]
