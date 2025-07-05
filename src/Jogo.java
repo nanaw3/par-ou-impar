@@ -4,7 +4,7 @@ public class Jogo {
 
     public static String jogar(String escolha, int numeroJogador, int numeroComputador) {
         int soma = numeroJogador + numeroComputador;
-        boolean deuPar = soma % 2 == 1;
+        boolean deuPar = soma % 2 == 0;
 
         if ((deuPar && escolha.equalsIgnoreCase("par")) ||
             (!deuPar && escolha.equalsIgnoreCase("ímpar"))) {
